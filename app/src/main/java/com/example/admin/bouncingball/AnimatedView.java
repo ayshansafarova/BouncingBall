@@ -11,6 +11,8 @@ import android.os.Handler;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
+import java.sql.Time;
+
 
 public class AnimatedView extends AppCompatImageView{
 
@@ -36,6 +38,7 @@ public class AnimatedView extends AppCompatImageView{
         }
     };
     protected void onDraw(Canvas c) {
+
         start=true;
 
         BitmapDrawable ball = (BitmapDrawable) mContext.getResources().getDrawable(R.mipmap.bouncing_ball_round);
@@ -55,4 +58,6 @@ public class AnimatedView extends AppCompatImageView{
         c.drawBitmap(ball.getBitmap(), x, y, null);
         h.postDelayed(r, FRAME_RATE);
     }
+
+
 }
